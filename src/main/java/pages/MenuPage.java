@@ -18,6 +18,7 @@ public class MenuPage {
 	public By homeLink = By.linkText("HOME");//obiect de tip care imi tine locatorul. Echivalent cu linia17
 	public By contactLink = By.linkText("CONTACTS");
 	public By loginLink = By.linkText("Login");
+	public By shopLink = By.linkText("BOOKS");
 	
 	//metode specifice cu locatorii sau elementele de mai sus
 	//metode specifice=functionalitate a paginii in care ma aflu
