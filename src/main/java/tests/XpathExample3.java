@@ -71,6 +71,7 @@ public class XpathExample3 extends BaseTest{
 		
 		//xpath --> //ul/li[*>1]
 		//gaseste toate paginile care au valoarea mai mare ca 1 ([*>1]) indiferent de tag name ul lor
+		//*[text=2
 		
 		//echivalent cu
 		//-->//*[contains(@class, 'page-numbers') and not(contains(text(), '1'))]

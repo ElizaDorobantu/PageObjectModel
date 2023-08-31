@@ -3,6 +3,7 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.Select;
 
@@ -17,8 +18,16 @@ public class ShopPage {
 	//locatori
 	
 	public By orderDropdown = By.name("orderby");
+	public By priceSliderInitialPosition = By.xpath("//span[@style='left: 0%;']");
+	public By priceSliderFinalPosition = By.xpath("//span[@style='left: 100%;']");
 	
 	//metode
+	public void dragAndDropSlider(By locator, int x, int y) {
+		WebElement element = driver.findElement(locator);
+		Actions action = new Actions(driver);
+		action.moveToElement(element).clickAndHold(element).moveByOffset(x, y).release().perform();
+	}
+	
 	public void selectByValue(String value) {
 		WebElement dropdown = driver.findElement(orderDropdown);
 		Select select = new Select(dropdown);
