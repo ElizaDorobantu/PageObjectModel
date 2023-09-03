@@ -1,5 +1,6 @@
 package tests;
 
+import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
 import java.time.Duration;
@@ -29,9 +30,14 @@ public class ShippingTest extends BaseTest{
 		
 		ShippingAddressPage shippingAddresse = new ShippingAddressPage(driver);
 		shippingAddresse.navigateToShippingAdressePage();
-		driver.findElement(By.cssSelector("span[class*='select2-selection']")).click();
-		shippingAddresse.selectByIndex(40);
-		Thread.sleep(10);
+		
+		shippingAddresse.selectByIndex(41);
+		assertEquals(shippingAddresse.getSelectedOption(shippingAddresse.countrydropdown), "Canada");
+		
+		shippingAddresse.selectByValue("NL");
+		assertEquals(shippingAddresse.getSelectedOption(shippingAddresse.provincedropdown), "Newfoundland and Labrador");
+		
+		
 	}
 
 }
