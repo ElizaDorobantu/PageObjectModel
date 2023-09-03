@@ -33,10 +33,10 @@ public class XpathExample2 extends BaseTest{
 		//liniile 2 de mai sus sunt echivalente
 		
 		//-->//ul//input[@id='log']
-		//echivelente cu linia de mai sus care e cea mai optimizata
+		//echivalente cu linia de mai sus care e cea mai optimizata
 		
 		//descendant e folosit cand vreau sa sar mai multi copii
-		//child cand vreau sa folosesc direc child
+		//child cand vreau sa folosesc direct child
 		
 		WebElement usernameField = driver.findElement(
 				By.xpath("//ul[@id='menu_user']/descendant::form[contains(@class,'login_form')]/child::div[contains(@class, 'login_field')]/child::input"));
