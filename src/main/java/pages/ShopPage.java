@@ -49,7 +49,7 @@ public class ShopPage {
 	/*
 	 * Method that returns the value as String from the current selection
 	 * of a drop down
-	 * @return uses getText() methos from selenium to return the text inside
+	 * @return uses getText() method from selenium to return the text inside
 	 * the selected option
 	 */
 	
