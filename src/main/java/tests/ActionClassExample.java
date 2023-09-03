@@ -14,7 +14,7 @@ public class ActionClassExample extends BaseTest{
 		MenuPage menu = new MenuPage(driver);
 		menu.hoverElement(menu.aboutLink);
 		menu.hoverElement(menu.blogLink);
-		menu.hoverElement(menu.shopLink);
+		menu.navigateTo(menu.shopLink);
 	}
 	
 	@Test(priority=2)

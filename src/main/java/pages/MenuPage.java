@@ -24,6 +24,8 @@ public class MenuPage {
 	public By aboutLink = By.linkText("ABOUT");
 	public By singleAuthourLink = By.linkText("SINGLE AUTHOR");
 	
+	public By postFormats = By.xpath("//li[@id='menu-item-232']//a");
+	
 	//metode specifice cu locatorii sau elementele de mai sus
 	//metode specifice=functionalitate a paginii in care ma aflu
 	public void navigateTo(By locator) {
