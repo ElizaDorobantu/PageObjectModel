@@ -2,6 +2,8 @@ package tests;
 
 import static org.testng.Assert.assertEquals;
 
+import java.time.Duration;
+
 import org.testng.annotations.Test;
 
 import pages.MenuPage;
@@ -16,7 +18,7 @@ public class SingleAuthorTest extends BaseTest{
 		menu.navigateTo(menu.singleAuthourLink);
 		
 		SingleAuthorPage singleAuthor = new SingleAuthorPage(driver);
-		Thread.sleep(2000);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		assertEquals(singleAuthor.getFieldValue(singleAuthor.drama),"95%");
 		assertEquals(singleAuthor.getFieldValue(singleAuthor.biography),"75%");
 		assertEquals(singleAuthor.getFieldValue(singleAuthor.cookbooks),"82%");
