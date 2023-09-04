@@ -13,6 +13,7 @@ import org.testng.annotations.BeforeClass;
 public class BaseTest {
 	
 	public WebDriver driver;//instanta de browser
+	public BasePage app;
 	
 	@BeforeClass//pentru a rula am nevoie obligatoriu de o metoda @Test
 	public void setup() {
@@ -33,6 +34,8 @@ public class BaseTest {
 
 		//driver.get("https://the-internet.herokuapp.com/dynamic_loading/1");
 		driver.get("https://keybooks.ro/");
+		
+		app = new BasePage();
 	}
 	
 	@AfterClass

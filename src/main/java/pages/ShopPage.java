@@ -20,12 +20,23 @@ public class ShopPage {
 	public By orderDropdown = By.name("orderby");
 	public By priceSliderInitialPosition = By.xpath("//span[@style='left: 0%;']");
 	public By priceSliderFinalPosition = By.xpath("//span[@style='left: 100%;']");
+	public By priceSliderFinalMoved = By.xpath("//span[@style='left: 62.5%;']");
 	
 	//metode
 	public void dragAndDropSlider(By locator, int x, int y) {
 		WebElement element = driver.findElement(locator);
 		Actions action = new Actions(driver);
 		action.moveToElement(element).clickAndHold(element).moveByOffset(x, y).release().perform();
+	}
+	
+	public void dragAndDropElement(By locator1, By locator2) {
+		WebElement element1 = driver.findElement(locator1);
+		WebElement element2 = driver.findElement(locator2);
+
+		Actions  action = new Actions(driver);
+		action.dragAndDrop(element1, element2).perform();
+		//linia 37 e acelasi lucru cu linia 39
+		//action.moveToElement(element1).clickAndHold(element1).moveToElement(element2).release().perform();
 	}
 	
 	public void selectByValue(String value) {
