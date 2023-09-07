@@ -12,7 +12,8 @@ import org.testng.annotations.BeforeClass;
 
 public class BaseTest {
 	
-	public WebDriver driver;//instanta de browser
+	public static WebDriver driver;//instanta de browser
+	//static ->obiectul e instantiat inainte de alte instantieri
 	public BasePage app;
 	
 	@BeforeClass//pentru a rula am nevoie obligatoriu de o metoda @Test

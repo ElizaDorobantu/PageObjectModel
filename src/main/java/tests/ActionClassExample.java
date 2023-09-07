@@ -91,7 +91,7 @@ public class ActionClassExample extends BaseTest{
 		//selectez textul pe care vreau sa il copiez
 		Keys ctrlKey = Platform.getCurrent().is(Platform.MAC) ? Keys.COMMAND : Keys.CONTROL;
 		//selectie cu CTRL+A
-		action.keyDown(ctrlKey).sendKeys("a").keyUp(Keys.CONTROL).perform();
+		action.keyDown(ctrlKey).sendKeys("a").keyUp(ctrlKey).perform();
 		
 		WebElement password = driver.findElement(app.login.passwordField);
 		
