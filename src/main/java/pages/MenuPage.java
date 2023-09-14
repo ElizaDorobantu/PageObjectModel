@@ -24,6 +24,8 @@ public class MenuPage {
 	public By aboutLink = By.linkText("ABOUT");
 	public By singleAuthourLink = By.linkText("SINGLE AUTHOR");
 	public By eventsLink = By.linkText("EVENTS");
+	public By searchIcon = By.cssSelector("button[class*='search_submit']");
+	public By searchInput = By.cssSelector("input[class='search_field']");
 	
 	public By postFormats = By.xpath("//li[@id='menu-item-232']//a");
 	
