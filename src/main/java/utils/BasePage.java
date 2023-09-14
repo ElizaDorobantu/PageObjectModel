@@ -10,6 +10,7 @@ import pages.PostFormatsPage;
 import pages.ShippingAddressPage;
 import pages.ShopPage;
 import pages.SingleAuthorPage;
+import pages.SingleEventPage;
 
 public class BasePage extends SeleniumWrappers{
 
@@ -23,4 +24,5 @@ public class BasePage extends SeleniumWrappers{
 	public ShippingAddressPage shippingAddress = new ShippingAddressPage(driver);
 	public SingleAuthorPage singleAuthor = new SingleAuthorPage(driver);
 	public EventsPage events = new EventsPage(driver);
+	public SingleEventPage singleEvent = new SingleEventPage(driver);
 }
