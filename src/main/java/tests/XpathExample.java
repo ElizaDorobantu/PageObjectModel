@@ -56,7 +56,7 @@ public class XpathExample extends BaseTest{
 		//Exemplu CONTAINS
 		//WebElement:
 		//<a href="https://keybooks.ro/wp-admin/profile.php" class="icon icon-cog">Settings</a>
-		// Accesare pe baa de contains atribute
+		// Accesare pe baza de contains atribute
 		//CSS
 		//--> a[href*='profile.php']
 		//vs

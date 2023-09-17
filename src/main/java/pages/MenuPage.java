@@ -26,6 +26,8 @@ public class MenuPage {
 	public By eventsLink = By.linkText("EVENTS");
 	public By searchIcon = By.cssSelector("button[class*='search_submit']");
 	public By searchInput = By.cssSelector("input[class='search_field']");
+	public By facebookLink = By.cssSelector("div[class='top_panel_top_socials'] a[class='social_icons social_facebook']");
+	public By twitterLink = By.cssSelector("div[class='top_panel_top_socials'] a[class='social_icons social_twitter']");
 	
 	public By postFormats = By.xpath("//li[@id='menu-item-232']//a");
 	
