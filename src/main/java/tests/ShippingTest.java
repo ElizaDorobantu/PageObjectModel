@@ -7,7 +7,9 @@ import java.time.Duration;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
 import pages.LoginPage;
@@ -19,23 +21,31 @@ public class ShippingTest extends BaseTest{
 	
 	@Test
 	public void selectBy() throws InterruptedException {
-		MenuPage menu = new MenuPage(driver);
+		app.click(app.menu.loginLink);
+		app.login.loginInApp("TestUser", "12345@67890");
+		
+		/*MenuPage menu = new MenuPage(driver);
 		menu.navigateTo(menu.loginLink);
 		
 		LoginPage login = new LoginPage(driver);
-		login.loginInApp("TestUser", "12345@67890");
+		login.loginInApp("TestUser", "12345@67890");*/
 		
-		Thread.sleep(10);
-		assertTrue(login.checkLoginMessageIsDisplayed(login.successLoginPopup));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(app.login.logoutButton));
+		//Thread.sleep(10);
 		
-		ShippingAddressPage shippingAddresse = new ShippingAddressPage(driver);
-		shippingAddresse.navigateToShippingAdressePage();
+		//assertTrue(app.login.checkLoginMessageIsDisplayed(app.login.successLoginPopup));
 		
-		shippingAddresse.selectByIndex(41);
-		assertEquals(shippingAddresse.getSelectedOption(shippingAddresse.countrydropdown), "Canada");
+		app.shippingAddress.navigateToShippingAdressePage();
 		
-		shippingAddresse.selectByValue("NL");
-		assertEquals(shippingAddresse.getSelectedOption(shippingAddresse.provincedropdown), "Newfoundland and Labrador");
+		/*ShippingAddressPage shippingAddresse = new ShippingAddressPage(driver);
+		shippingAddresse.navigateToShippingAdressePage();*/
+		
+		app.shippingAddress.selectByIndex(41,app.shippingAddress.countrydropdown);
+		assertEquals(app.shippingAddress.getSelectedOption(app.shippingAddress.countrydropdown), "Canada");
+		
+		app.shippingAddress.selectByValue("NL", app.shippingAddress.provincedropdown);
+		assertEquals(app.shippingAddress.getSelectedOption(app.shippingAddress.provincedropdown), "Newfoundland and Labrador");
 		
 		
 	}

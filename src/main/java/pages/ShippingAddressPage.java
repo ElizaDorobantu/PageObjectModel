@@ -21,16 +21,16 @@ public class ShippingAddressPage {
 		driver.get("https://keybooks.ro/account/edit-address/shipping/");
 	}
 	
-	public void selectByIndex(int index) {
-		WebElement dropdown = driver.findElement(countrydropdown);
+	public void selectByIndex(int index, By locator) {
+		WebElement dropdown = driver.findElement(locator);
 		
 		Select select = new Select(dropdown);
 		select.selectByIndex(index);	
 	}
 	
-	public void selectByValue(String value) {
+	public void selectByValue(String value, By locator) {
 	
-		WebElement dropdown = driver.findElement(provincedropdown);
+		WebElement dropdown = driver.findElement(locator);
 		Select select = new Select(dropdown);
 		select.selectByValue(value);
 	}
