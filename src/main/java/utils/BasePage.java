@@ -4,6 +4,7 @@ import pages.AudioPostPage;
 import pages.ContactsPage;
 import pages.ElementsOnAnyBookPage;
 import pages.EventsPage;
+import pages.HomePage;
 import pages.LoginPage;
 import pages.MenuPage;
 import pages.PostFormatsPage;
@@ -25,5 +26,6 @@ public class BasePage extends SeleniumWrappers{
 	public SingleAuthorPage singleAuthor = new SingleAuthorPage(driver);
 	public EventsPage events = new EventsPage(driver);
 	public SingleEventPage singleEvent = new SingleEventPage(driver);
+	public HomePage homepage = new HomePage(driver);
 	
 }
