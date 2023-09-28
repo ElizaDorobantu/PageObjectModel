@@ -2,10 +2,13 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.interactions.Actions;
+
+import utils.SeleniumWrappers;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class MenuPage {
+public class MenuPage extends SeleniumWrappers{
 	
 	public WebDriver driver;
 	
@@ -24,8 +27,10 @@ public class MenuPage {
 	public By aboutLink = By.linkText("ABOUT");
 	public By singleAuthourLink = By.linkText("SINGLE AUTHOR");
 	public By eventsLink = By.linkText("EVENTS");
+	
 	public By searchIcon = By.cssSelector("button[class*='search_submit']");
 	public By searchInput = By.cssSelector("input[class='search_field']");
+	
 	public By facebookLink = By.cssSelector("div[class='top_panel_top_socials'] a[class='social_icons social_facebook']");
 	public By twitterLink = By.cssSelector("div[class='top_panel_top_socials'] a[class='social_icons social_twitter']");
 	
@@ -33,6 +38,7 @@ public class MenuPage {
 	
 	//metode specifice cu locatorii sau elementele de mai sus
 	//metode specifice=functionalitate a paginii in care ma aflu
+	
 	public void navigateTo(By locator) {
 		driver.findElement(locator).click();
 	}
@@ -42,5 +48,11 @@ public class MenuPage {
 		WebElement element = driver.findElement(locator);
 		Actions action = new Actions(driver);
 		action.moveToElement(element).perform();
+	}
+	
+	public void search(String textToSearch) {
+		click(searchIcon);
+		sendKeys(searchInput, textToSearch);
+		click(searchIcon);
 	}
 }
