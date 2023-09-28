@@ -47,9 +47,9 @@ public class ScrollExample extends BaseTest{
 		Actions action = new Actions(driver);
 		
 		//js executor scroll
-		jse.executeScript("windows.scrollTo(0,document.body.scrollHeight)");
+		jse.executeScript("window.scrollTo(0,document.body.scrollHeight)");
 		Thread.sleep(3000);
-		jse.executeScript("windows.scrollTo(0,-document.body.scrollHeight)");
+		jse.executeScript("window.scrollTo(0,-document.body.scrollHeight)");
 		Thread.sleep(3000);
 		
 		//action class scroll
