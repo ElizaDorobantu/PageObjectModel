@@ -40,7 +40,7 @@ public class DataProviderClass {
 		data[2][1]= "https://keybooks.ro/shop/life-in-the-garden/";
 		
 		data[3][0]= "The long road to the deep Silence";
-		data[3][1]= "https://keybooks.ro/shop/the-long-road-to-the-deep-silence/ ";
+		data[3][1]= "https://keybooks.ro/shop/the-long-road-to-the-deep-silence/";
 		
 		data[4][0]= "It’s a really strange story";
 		data[4][1]= "https://keybooks.ro/shop/its-a-really-strange-story/";
