@@ -36,6 +36,7 @@ public class MenuPage extends SeleniumWrappers{
 	
 	public By postFormats = By.xpath("//li[@id='menu-item-232']//a");
 	
+	
 	//metode specifice cu locatorii sau elementele de mai sus
 	//metode specifice=functionalitate a paginii in care ma aflu
 	

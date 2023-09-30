@@ -6,7 +6,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.devtools.v113.tethering.model.Accepted;
 import org.openqa.selenium.interactions.Actions;
 
-public class PostFormatsPage {
+import utils.BaseTest;
+
+public class PostFormatsPage extends BaseTest{
 
 	public WebDriver driver;
 	
@@ -14,7 +16,8 @@ public class PostFormatsPage {
 		this.driver=driver;
 	}
 	
-	public By audioPost = By.xpath("//h4[@class='post_title']//a[text()='Audio post']");
+	public By audioPost = By.xpath("//h4[@class='post_title']//a[text()='Audio post']");	
+	public By galleryFormat = By.xpath("//a[text()='Gallery Format']");
 	
 	public void navigateTo(By locator) {
 		driver.findElement(locator).click();
