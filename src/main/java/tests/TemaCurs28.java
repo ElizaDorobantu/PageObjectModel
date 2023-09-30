@@ -1,5 +1,7 @@
 package tests;
 
+import static org.testng.Assert.assertEquals;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,8 +14,9 @@ import utils.BaseTest;
 
 public class TemaCurs28 extends BaseTest{
 	
-	@Test
-	public void redirectFacebook() {
+	@Test(priority=1)
+	public void redirectFacebook() throws InterruptedException {
+		app.click(app.menu.homeLink);
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		WebElement facebookLink = driver.findElement(app.menu.facebookLink);
 		js.executeScript("arguments[0].click()", facebookLink);
@@ -21,13 +24,31 @@ public class TemaCurs28 extends BaseTest{
 		List <String> browserTabs = new ArrayList<String>(driver.getWindowHandles());
 		driver.switchTo().window(browserTabs.get(1));
 		driver.findElement(By.xpath(" //div[ @tabindex='0'] //span[text()='Allow all cookies']")).click();
-		driver.close();
+		assertEquals(driver.getCurrentUrl(), "https://www.facebook.com/keytraining.ro");
+		app.tearDown();
 	}
 
-	@Test
-	public void redirectTwitter() {
+	@Test(priority=2)
+	public void redirectTwitter() throws InterruptedException {
+		app.setup();
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		WebElement twitterLink = driver.findElement(app.menu.twitterLink);
 		js.executeScript("arguments[0].click()", twitterLink);
+		List <String> browserTabs = new ArrayList<String>(driver.getWindowHandles());
+		driver.switchTo().window(browserTabs.get(1));
+		assertEquals(driver.getCurrentUrl(), "https://twitter.com/");
+		app.tearDown();
+	}
+	
+	@Test(priority=3)
+	public void redirectInstagram() throws InterruptedException {
+		app.setup();
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		WebElement instagramLink = driver.findElement(app.menu.instagramLink);
+		js.executeScript("arguments[0].click()", instagramLink);
+		List <String> browserTabs = new ArrayList<String>(driver.getWindowHandles());
+		driver.switchTo().window(browserTabs.get(1));
+		assertEquals(driver.getCurrentUrl(), "https://www.instagram.com/");
+		app.tearDown();
 	}
 }

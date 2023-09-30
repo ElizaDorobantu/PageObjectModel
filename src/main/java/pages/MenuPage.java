@@ -31,8 +31,9 @@ public class MenuPage extends SeleniumWrappers{
 	public By searchIcon = By.cssSelector("button[class*='search_submit']");
 	public By searchInput = By.cssSelector("input[class='search_field']");
 	
-	public By facebookLink = By.cssSelector("div[class='top_panel_top_socials'] a[class='social_icons social_facebook']");
-	public By twitterLink = By.cssSelector("div[class='top_panel_top_socials'] a[class='social_icons social_twitter']");
+	public By facebookLink = By.xpath("(//a[@class='social_icons social_facebook'])[1]");
+	public By twitterLink = By.xpath("(//a[@class='social_icons social_twitter'])[1]");
+	public By instagramLink = By.xpath("(//a[@class='social_icons social_instagramm'])[1]");
 	
 	public By postFormats = By.xpath("//li[@id='menu-item-232']//a");
 	
