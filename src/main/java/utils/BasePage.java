@@ -1,6 +1,7 @@
 package utils;
 
 import pages.AudioPostPage;
+import pages.ClassicPage;
 import pages.ContactsPage;
 import pages.ElementsOnAnyBookPage;
 import pages.EventsPage;
@@ -13,6 +14,7 @@ import pages.ShippingAddressPage;
 import pages.ShopPage;
 import pages.SingleAuthorPage;
 import pages.SingleEventPage;
+import pages.WhyIWontStopBuyingBooksPage;
 
 public class BasePage extends SeleniumWrappers{
 
@@ -29,5 +31,6 @@ public class BasePage extends SeleniumWrappers{
 	public SingleEventPage singleEvent = new SingleEventPage(driver);
 	public HomePage homepage = new HomePage(driver);
 	public GalleryFormatPage galleryFormatPage = new GalleryFormatPage(driver);
-	
+	public ClassicPage classicPage = new ClassicPage(driver);
+	public WhyIWontStopBuyingBooksPage whyIWontStopBuyingBooksPage = new WhyIWontStopBuyingBooksPage(driver);
 }

@@ -21,6 +21,7 @@ public class ShopPage {
 	public By priceSliderInitialPosition = By.xpath("//span[@style='left: 0%;']");
 	public By priceSliderFinalPosition = By.xpath("//span[@style='left: 100%;']");
 	public By priceSliderFinalMoved = By.xpath("//span[@style='left: 62.5%;']");
+	public By cookbooksCategory = By.xpath("//a[text()='Cookbooks']");
 	
 	//metode
 	public void dragAndDropSlider(By locator, int x, int y) {

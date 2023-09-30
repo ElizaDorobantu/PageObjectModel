@@ -36,7 +36,7 @@ public class MenuPage extends SeleniumWrappers{
 	public By instagramLink = By.xpath("(//a[@class='social_icons social_instagramm'])[1]");
 	
 	public By postFormats = By.xpath("//li[@id='menu-item-232']//a");
-	
+	public By blogClassic = By.xpath("//li[@id='menu-item-76']//a[text()='Classic']");
 	
 	//metode specifice cu locatorii sau elementele de mai sus
 	//metode specifice=functionalitate a paginii in care ma aflu
