@@ -30,7 +30,7 @@ public class TemaCurs28 extends BaseTest{
 
 	@Test(priority=2)
 	public void redirectTwitter() throws InterruptedException {
-		app.setup();
+		app.setup("https://keybooks.ro/");
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		WebElement twitterLink = driver.findElement(app.menu.twitterLink);
 		js.executeScript("arguments[0].click()", twitterLink);
@@ -42,7 +42,7 @@ public class TemaCurs28 extends BaseTest{
 	
 	@Test(priority=3)
 	public void redirectInstagram() throws InterruptedException {
-		app.setup();
+		app.setup("https://keybooks.ro/");
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		WebElement instagramLink = driver.findElement(app.menu.instagramLink);
 		js.executeScript("arguments[0].click()", instagramLink);
