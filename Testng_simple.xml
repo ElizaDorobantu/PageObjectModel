@@ -4,7 +4,7 @@
         <classes>
             <class name="tests.DataProviderLoginTest" ></class> 
             <class name="tests.DataProviderSearchTest" ></class>  
-            <class name="tests.DropdownTest" ></class>                                          
+            <class name="tests.DropdownTest" ></class>                                        
         </classes>
     </test>
 </suite>
