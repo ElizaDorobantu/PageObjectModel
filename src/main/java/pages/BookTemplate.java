@@ -14,5 +14,5 @@ public class BookTemplate extends SeleniumWrappers{
 	}
 	
 	public By categories = By.cssSelector("span[class='posted_in']>a");
-	
+	public By productId = By.cssSelector("span[class='product_id']>span");
 }
