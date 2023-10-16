@@ -3,8 +3,8 @@
     <test name="123" >
     	<parameter name="appURL" value="https://keybooks.ro/"/>
         <classes>
-        	<!--  <class name="tests.TemaCurs28" ></class>    --> 
-        	<class name="tests.TemaCurs26" > </class>                               
+        	<!--  <class name="tests.TemaCurs33" ></class>    --> 
+        	<class name="tests.TemaCurs33" > </class>                               
         </classes>
     </test>
 </suite>

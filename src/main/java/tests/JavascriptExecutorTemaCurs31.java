@@ -50,6 +50,6 @@ public class JavascriptExecutorTemaCurs31 extends BaseTest{
 		String exempluIsDisplayed = jse.executeScript("return document.getElementsByClassName('comment_not_approved')[0].checkVisibility();").toString();
 		System.out.println("isDisplayed : " + exempluIsDisplayed);
 		
-		
+		//assertEquals(app.returnElement(app.galleryFormatPage.commentText).getText(), "Your comment is awaiting moderation.");
  	}
 }

@@ -1,6 +1,7 @@
 package utils;
 
 import pages.AudioPostPage;
+import pages.BookTemplate;
 import pages.ClassicPage;
 import pages.ContactsPage;
 import pages.ElementsOnAnyBookPage;
@@ -33,4 +34,5 @@ public class BasePage extends SeleniumWrappers{
 	public GalleryFormatPage galleryFormatPage = new GalleryFormatPage(driver);
 	public ClassicPage classicPage = new ClassicPage(driver);
 	public WhyIWontStopBuyingBooksPage whyIWontStopBuyingBooksPage = new WhyIWontStopBuyingBooksPage(driver);
+	public BookTemplate bookTemplate = new BookTemplate(driver);
 }
