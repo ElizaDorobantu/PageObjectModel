@@ -26,7 +26,7 @@ public class TemaCurs26 extends BaseTest{
 		assertTrue(driver.findElement(app.whyIWontStopBuyingBooksPage.categoryRecommend).isDisplayed());
 	}
 	
-	@Test
+	//@Test
 	public void verificare2() {
 		app.click(app.menu.shopLink);
 		app.click(app.shop.cookbooksCategory);	
@@ -43,6 +43,16 @@ public class TemaCurs26 extends BaseTest{
 		
 	}
 	
+	 @Test
+     public void verificare2_1() {
+	    app.click(app.menu.shopLink);
+	    app.click(app.shop.cookbooksCategory);
+	    List<WebElement> cartiAfisate = driver.findElements(By.xpath("//a[@class='hover_icon hover_icon_link']"));
+	    for(int i = 1; i <= cartiAfisate.size(); i++) {
+	       WebElement saleImage = driver.findElement(By.xpath("(//a[@class='hover_icon hover_icon_link']/span)["+i+"]"));
+	       assertTrue(saleImage.isDisplayed());
+	    }
+	}
 	
 
 }

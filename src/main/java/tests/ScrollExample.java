@@ -10,7 +10,7 @@ import utils.BaseTest;
 public class ScrollExample extends BaseTest{
 	
 	//@Test
-	public void scrillByPixels() throws InterruptedException {
+	public void scrollByPixels() throws InterruptedException {
 		//js executor scroll
 		JavascriptExecutor jse = (JavascriptExecutor)driver;
 		jse.executeScript("window.scrollBy(0,1500)");

@@ -20,7 +20,7 @@ public class ShopPage {
 	public By orderDropdown = By.name("orderby");
 	public By priceSliderInitialPosition = By.xpath("//span[@style='left: 0%;']");
 	public By priceSliderFinalPosition = By.xpath("//span[@style='left: 100%;']");
-	public By priceSliderFinalMoved = By.xpath("//span[@style='left: 62.5%;']");
+	public By priceSliderFinalMoved = By.xpath("//span[@style='left: 60.4167%;']");
 	public By cookbooksCategory = By.xpath("//a[text()='Cookbooks']");
 	
 	//metode

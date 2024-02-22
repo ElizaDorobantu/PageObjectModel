@@ -28,9 +28,11 @@ public class ActionClassExample extends BaseTest{
 	
 	//@Test(priority=2)
 	public void dragAndDropExample() throws InterruptedException {
-		JavascriptExecutor jse = (JavascriptExecutor) driver;
-		jse.executeScript("window.scrollBy(0,1200)");
+		//JavascriptExecutor jse = (JavascriptExecutor) driver;
+		//jse.executeScript("window.scrollBy(0,1200)");
+		MenuPage menu = new MenuPage(driver);
 		ShopPage shop = new ShopPage(driver);
+		menu.navigateTo(menu.shopLink);
 		//shop.dragAndDropSlider(shop.priceSliderInitialPosition, 100, 0);
 		shop.dragAndDropSlider(shop.priceSliderFinalPosition, -100, 0);
 		shop.dragAndDropElement(shop.priceSliderInitialPosition, shop.priceSliderFinalMoved);
@@ -42,7 +44,7 @@ public class ActionClassExample extends BaseTest{
 		Actions action = new Actions(driver);
 		action.scrollByAmount(0, 2000).perform();
 		Thread.sleep(3000);
-		action.scrollByAmount(0, -2000).perform();
+		action.scrollByAmount(0, -1000).perform();
 		Thread.sleep(3000);
 	}
 	

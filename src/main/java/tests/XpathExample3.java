@@ -46,7 +46,7 @@ public class XpathExample3 extends BaseTest{
 		// 2. cobor pe copilul lui <span> --> //span[@class='price']/span
 		// 3. de la span fac o referinta catre copilul lui span <bdi> si valoarea
 		// acestui copil --> //span[@class='price']/span[bdi='$10.20']
-		// 4. pentru ca acum gasesc 5 elemente si vreau pecific elementul 2
+		// 4. pentru ca acum gasesc 5 elemente si vreau specific elementul 2
 		// aleg sa folosesc index --> (//span[@class='price']/span[bdi='$10.20'])[2]
 		// 5. dupa ce m-am oprit pe elementul 2 cu index, urc cu .. doua niveluri mai sus
 		// adica pe doi parinti --> //(//span[@class='price']/span[bdi='$10.20'])[2]/../..
